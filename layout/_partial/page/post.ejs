@@ -1,0 +1,32 @@
+<%- css('static/css/post.css') %>
+<div id="main">
+    <div class="wrap">
+        <div id="page-post">
+        	<article class="markdown">
+				<h1>
+					<% if (post.link) { %>
+                        <%= post.title || '(' + __('post.no_title') + ')' %>
+                    <% } else { %>
+                        <%= post.title || '(' + __('post.no_title') + ')' %>
+                    <% } %>
+				</h1>
+				<p class="note-tags">
+					<%  post.tags.each(function( tag , index ){ %>
+                        <a  href="<%= '/tags/' + tag.name  %>" data-tag="<%= tag.name.toLowerCase() %>">
+                            <code class="notebook"><%= tag.name %></code>
+                        </a>
+                    <% }) %>
+				</p>
+				<div class="content">
+					<%- post.content %>
+				</div>
+			</article>
+            <% if (theme.disqus_shortname) { %>
+                <%- partial('../include/disqus') %>
+            <%}else if(theme.duoshuo_shortname){%>
+                <%- partial('../include/duoshuo') %>
+            <%}%>
+        </div>
+    </div>
+</div>
+<%- partial('../include/scripts') %>

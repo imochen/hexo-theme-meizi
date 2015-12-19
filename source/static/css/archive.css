@@ -1,0 +1,68 @@
+#page-archive {
+  padding: 0 30px; }
+  #page-archive section {
+    position: relative; }
+    #page-archive section h1.year {
+      border-top: 1px solid white;
+      line-height: 35px;
+      padding-top: 15px;
+      font-size: 30px;
+      color: #666;
+      position: absolute;
+      top: 0;
+      width: 200px; }
+      #page-archive section h1.year::before {
+        border-top: 1px solid rgba(136, 144, 154, 0.3);
+        content: "";
+        position: absolute;
+        top: -2px;
+        width: 100%; }
+    #page-archive section article {
+      margin-left: 200px;
+      padding: 15px 0;
+      height: 65px;
+      border-bottom: 1px solid rgba(136, 144, 154, 0.3);
+      border-top: 1px solid white;
+      position: relative; }
+      #page-archive section article h1 {
+        font-size: 18px;
+        line-height: 35px;
+        font-weight: normal; }
+        #page-archive section article h1 a {
+          color: #333;
+          text-decoration: none;
+          -webkit-transition: color .2s ease-in-out;
+          transition: color .2s ease-in-out; }
+          #page-archive section article h1 a:hover {
+            color: #349ef3; }
+      #page-archive section article .meta {
+        color: #333;
+        float: right;
+        font-size: 13px;
+        line-height: 35px;
+        position: relative;
+        text-align: right;
+        width: auto; }
+        #page-archive section article .meta .tags {
+          margin-left: 5px; }
+        #page-archive section article .meta a {
+          color: #88909a;
+          text-decoration: none; }
+          #page-archive section article .meta a:hover {
+            color: #349ef3; }
+
+@media screen and (max-width: 768px) {
+  #page-archive {
+    padding: 0 15px; }
+    #page-archive section h1.year {
+      width: 100%;
+      position: static;
+      font-size: 24px; }
+      #page-archive section h1.year::before {
+        border: none; }
+    #page-archive section article {
+      margin-left: 0; }
+      #page-archive section article .meta {
+        display: none; }
+      #page-archive section article h1 {
+        font-size: 16px; } }

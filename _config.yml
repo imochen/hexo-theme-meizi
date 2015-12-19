@@ -1,0 +1,75 @@
+#图片目录配置
+image_dir : static/images/
+
+#用户配置
+author:
+	#用户名称
+	name: mochen
+	#用户头像
+	gravatar: gravatar.jpg
+
+disqus_shortname: imochen
+duoshuo_shortname: 
+
+#侧栏配置
+#以下配置均无容错处理，大家都是程序员，配置错误请不要找作者。
+sidebar:
+    menu:
+        home:
+            title: global.home
+            url: /
+            icon: home
+        # categories:
+        #     title: global.categories
+        #     url: /categories
+        #     icon: bookmark
+        archives:
+            title: global.archives
+            url: /archive
+            icon: archive
+        tags:
+            title: global.tags
+            url: /tags
+            icon: tags
+        search:
+            title: global.search
+            url: /#search
+            icon: search
+        about:
+            title: global.about
+            url: /#about
+            icon: user
+    author_links:
+        github:
+            title: global.github
+            url: https://github.com/imochen
+            icon: github
+        # stack_overflow:
+        #     title: global.stack_overflow
+        #     url: http://stackoverflow.com/users
+        #     icon: stack-overflow
+        # twitter:
+        #     title: global.twitter
+        #     url: https://twitter.com/
+        #     icon: twitter
+        # facebook:
+        #     title: global.facebook
+        #     url: https://facebook.com/
+        #     icon: facebook
+        # google_plus:
+        #     title: global.google_plus
+        #     url: https://plus.google.com/
+        #     icon: google-plus
+        # linked_in:
+        #     title: global.linkedin
+        #     url: https://www.linkedin.com/profile/
+        #     icon: linkedin
+        # mail:
+        #     title: global.mail
+        #     url: mailto:
+        #     icon: envelope-o
+    rss:
+        rss:
+            title: global.rss
+            url: /atom.xml
+            icon: rss

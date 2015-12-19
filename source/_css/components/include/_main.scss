@@ -1,0 +1,35 @@
+#main{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: $size_sidebar_normal;
+	z-index: 2;
+	overflow: hidden;
+	background-color: $color_default;
+	.wrap{
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	body.side &{
+		position: fixed;
+		transform: translate3D( $size_sidebar_normal , 0 , 0);
+	}
+	body.pc &{
+		overflow: auto;
+	}
+}
+@include screen( 768px , 1024px ){
+	#main{
+		left: $size_sidebar_mini;
+	}
+}
+
+@include max-screen( 768px ){
+	#main{
+		left: 0;
+		transition: transform .2s ease-in-out;
+		top: $size_common_55;
+		transform: translate3D( 0 , 0 , 0);
+	}
+}

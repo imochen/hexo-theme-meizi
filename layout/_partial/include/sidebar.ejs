@@ -1,0 +1,43 @@
+<% 
+	function resolveImgURL(from, path) {
+        // check if the url provided is
+        if (from !== null && !is_remote_url(path)) {
+            // format `from` path
+            // remove .html at the end of url
+            if (from.indexOf('.html') >= 0) {
+                from = from.replace('.html', '')
+            }
+            // remove end `/` of `from` path
+            if (from.length === from.lastIndexOf('/') + 1) {
+                from = from.substr(0, from.lastIndexOf('/'))
+            }
+            // remove end `/` of `url` path
+            if (path.indexOf('/') === 1) {
+                path = url.substr(1);
+            }
+            return url_for(from + '/' + path);
+
+        }
+        else {
+            return path;
+        }
+    }
+%>
+<nav id="sidebar">
+    <div class="wrap">
+    	<% if( theme.author.gravatar ){ %>
+    		<div class="profile">
+    			<a href="/"><img src="<%= resolveImgURL(theme.image_dir,theme.author.gravatar) %>" alt="<%= theme.author.name %>"></a>
+    			<span><%= theme.author.name %></span>
+    		</div>
+    	<%}%>
+
+    	<% for( var items in theme.sidebar){ %>
+    		<ul class="buttons">
+    			<% for( var item in theme.sidebar[items]){%>
+    				<li><a href="<%=theme.sidebar[items][item].url%>"><i class="fa fa-lg fa-<%=theme.sidebar[items][item].icon%>" title="<%=__(theme.sidebar[items][item].title)%>"></i><span><%=__(theme.sidebar[items][item].title)%></span></a></li>
+    			<%}%>
+    		</ul>
+    	<%}%>
+    </div>
+</nav>

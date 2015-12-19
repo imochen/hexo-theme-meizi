@@ -1,0 +1,26 @@
+#pagination{
+	height: $size_common_60;
+	line-height: $size_common_50;
+	padding: $size_common_5 $size_common_20;
+	border-bottom: 1px solid $color_light_grey;
+	margin: 0 auto;
+	max-width: 960px;
+	li.prev{
+		float: left;
+	}
+	li.next{
+		float: right;
+	}
+	a{
+		transition: color .2s ease-in-out,border .2s ease-in-out;
+		border: 1px solid $color_dark_grey;
+		color: $color_dark_grey;
+		text-decoration: none;
+		padding: $size_common_10 $size_common_15;
+		border-radius: $size_common_5;
+		&:hover{
+			border-color: $color_light_black;
+			color: $color_dark_black;
+		}
+	}
+}

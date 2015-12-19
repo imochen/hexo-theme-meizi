@@ -1,0 +1,28 @@
+#page-tags {
+  padding: 30px;
+  color: #333; }
+  #page-tags section {
+    padding: 15px 0; }
+    #page-tags section a {
+      display: inline-block;
+      font-size: 14px;
+      padding: 0 15px;
+      height: 40px;
+      line-height: 40px;
+      color: rgba(52, 158, 243, 0.8);
+      border: 1px solid rgba(52, 158, 243, 0.8);
+      border-radius: 5px;
+      margin: 0 15px 10px 0;
+      text-decoration: none;
+      -webkit-transition: color .2s ease-in-out , border .2s ease-in-out;
+      transition: color .2s ease-in-out , border .2s ease-in-out; }
+      #page-tags section a:hover {
+        color: #349ef3;
+        border-color: #349ef3; }
+
+@media screen and (max-width: 768px) {
+  #page-tags {
+    padding: 15px; }
+    #page-tags h1 {
+      font-size: 24px;
+      margin-bottom: 10px; } }
