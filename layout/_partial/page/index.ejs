@@ -1,4 +1,3 @@
-<%- css('static/css/index.css') %>
 <div id="main">
     <div class="wrap">
         <section id="page-index">
@@ -37,11 +36,16 @@
                             </a>
                         <% } %>
                     </h1>
+                    <%
+                        function delHtmlTag( str ){
+                            return str.replace(/<[^>]+>/g,"");
+                        }
+                    %>
                     <div class="desc">
                         <% if( post.excerpt){ %>
-                            <%- post.excerpt %>
+                            <%- delHtmlTag(post.excerpt) %>
                         <%} else{ %>
-                            <%- post.content %>
+                            <%- delHtmlTag(post.content) %>
                         <%} %>
                      </div>
                     <p class="more">

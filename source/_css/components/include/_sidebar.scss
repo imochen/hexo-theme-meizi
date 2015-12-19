@@ -6,13 +6,11 @@
 	top: 0;
 	background-image: url('../images/cover.jpg');
 	background-size: cover;
-	overflow: hidden;
+	overflow: auto;
 	z-index: 1;
+	-webkit-overflow-scrolling: touch;
 	body.side &{
 		transform: translate3D(0,0,0);
-	}
-	body.pc &{
-		overflow: auto;
 	}
 	.profile{
 		padding-top: $size_common_40;

@@ -5,8 +5,9 @@
 	bottom: 0;
 	left: $size_sidebar_normal;
 	z-index: 2;
-	overflow: hidden;
 	background-color: $color_default;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
 	.wrap{
 		max-width: 960px;
 		margin: 0 auto;
@@ -14,9 +15,6 @@
 	body.side &{
 		position: fixed;
 		transform: translate3D( $size_sidebar_normal , 0 , 0);
-	}
-	body.pc &{
-		overflow: auto;
 	}
 }
 @include screen( 768px , 1024px ){

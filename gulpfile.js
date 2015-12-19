@@ -26,11 +26,13 @@ var conf = {
 gulp.task('css',function(){
 	return sass( conf.src.css )
 		.pipe(autoprefixer())
+		.pipe(minifyCss())
 		.pipe( gulp.dest(conf.dest.css) );
 });
 
 gulp.task('js',function(){
 	return gulp.src( conf.src.js )
+		.pipe(uglify())
         .pipe(gulp.dest( conf.dest.js ))
 });
 

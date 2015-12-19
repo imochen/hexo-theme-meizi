@@ -106,11 +106,8 @@
 	    border-radius: 2px;
 	    line-height: 1.1em;
 	    background-color: #f8f8f8;
-	    overflow: hidden;
-	}
-	
-	body.pc & .highlight{
-		overflow-x: auto;
+	    overflow: auto;
+	    -webkit-overflow-scrolling: touch;
 	}
 
 	.highlight table,.highlight tr,.highlight td {

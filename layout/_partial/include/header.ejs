@@ -8,7 +8,38 @@
 	<% if (theme.favicon) { %>
         <link rel="icon" href="<%= theme.favicon %>">
     <% } %>
-	<title><%= config.title %></title>
+    <%
+        function delHtmlTag( str ){
+            return str.replace(/<[^>]+>/g,"");
+        }
+        var tags = [];
+        if( page&&page.tags ){
+        	page.tags.each(function( tag , index ){
+        		tags.push( tag.name );
+        	})
+        }
+
+        var excerpt;
+        if( page && page.excerpt ){
+        	excerpt = delHtmlTag( page.excerpt).replace(/\s/g,'');
+        }else if( page && page.content ){
+        	excerpt = delHtmlTag( page.content ).replace(/\s/g,'');
+        }
+
+        var title;
+        if( page && page.title ){
+        	title = page.title + ' - ' + config.title
+        }else{
+        	title = config.title;
+        }
+    %>
+    <% if( tags.length > 0 ){%>
+    	<meta name="keyword" content="<%= tags.join(',')%>">
+    <%}%>
+    <% if( excerpt ){%>
+    	<meta name="description" content="<%= excerpt%>">
+    <%}%>
+	<title><%=title%></title>
 	<%- css('static/css/font-awesome.css') %>
 	<%- css('static/css/style.css') %>
 </head>

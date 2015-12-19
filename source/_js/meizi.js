@@ -1,14 +1,13 @@
-$(function(){
+document.addEventListener( "DOMContentLoaded", function(){
+
 
 	var Meizi = {
-		$sidebar : $('#sidebar'),
-		$main : $('#main'),
-		$body : $('body'),
-		$btn_side : $('#header i'),
-		$window : $(window),
+		$sidebar : document.querySelector('#sidebar'),
+		$main : document.querySelector('#main'),
+		$body : document.body,
+		$btn_side : document.querySelector('#header i'),
 
 		init : function(){
-			this.loadIscroll(); //初始化滚动条
 			this.bindEvent(); //绑定事件
 		}
 	};
@@ -25,82 +24,38 @@ $(function(){
 		return result;
 	})();
 
-	Meizi.loadIscroll = function(){
-		if( this.isPC ){
-			this.$body.addClass('pc');
-		}else{
-			this.initScroll()
-		}
-	}
-
-	Meizi.initScroll = function(){
-		var options = {
-			click : true,
-			mouseWheel : true,
-			scrollbars : true,
-			fadeScrollbars : true,
-			preventDefault : false,
-			shrinkScrollbars : 'clip'
-		}
-
-		//侧栏滚动条初始化
-		var sideScroll = new IScroll( '#sidebar' , options );
-		sideScroll.on('scrollEnd', function(){
-			sideScroll.refresh();
-		});
-
-		//主界面滚动条初始化
-		var mainScroll = new IScroll( '#main' , options );
-		mainScroll.on('scrollEnd', function(){
-			mainScroll.refresh();
-		});
-
-
-		window.onload = function(){
-
-		}
-
-
-		var highlightOpt = {
-			scrollX : true ,
-			scrollbars : true,
-			fadeScrollbars : true,
-			preventDefault : false,
-			shrinkScrollbars : 'clip'
-		}
-		//代码高亮区域滚动条初始化
-		$('.highlight').each(function(){
-			new IScroll(  this , highlightOpt );
-		})
-		
-	}
-
 	Meizi.bindEvent = function(){
+
 
 		var _this = this,
 			body_class_name = 'side',
-			main_event_name = 'click.once touchmove.once';
+			eventName = 'click';
 
-		this.$btn_side.on('click',function(){
+		if( !this.isPC ){
+			eventName = 'touchend'
+		}
 
-			if( _this.$body.hasClass( body_class_name ) ){
-				_this.$body.removeClass( body_class_name);
-				_this.$main.off( main_event_name );
+		this.$btn_side.addEventListener( eventName ,function(){
+
+			if( _this.$body.className.indexOf( body_class_name ) > -1 ){
+				_this.$body.className = _this.$body.className.replace( body_class_name , '');
+				_this.$main.removeEventListener( eventName );
 			}else{
-				_this.$body.addClass( body_class_name );
-				_this.$main.on( main_event_name , function(){
-					_this.$btn_side.trigger('click');
-				})
+				_this.$body.className += (' ' + body_class_name);
+				_this.$main.addEventListener( eventName , function( e ){
+					_this.$body.className = _this.$body.className.replace( body_class_name , '');
+					_this.$main.removeEventListener( eventName );
+				},false);
 			}
 
-		});
+		},false)
 
-		this.$window.on('resize',function(){
-			_this.$body.removeClass( body_class_name );
-			_this.$main.off( main_event_name );
-		})
+		window.addEventListener('resize',function(){
+			_this.$body.className = _this.$body.className.replace( body_class_name , '');
+			_this.$main.removeEventListener( eventName );
+		},false)
 	}
 
 	Meizi.init();
 
-});
+}, false );

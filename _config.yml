@@ -10,6 +10,7 @@ author:
 
 disqus_shortname: imochen
 duoshuo_shortname: 
+swiftype_install_key: w8FFTKFNZed2tJN2ZA6p
 
 #侧栏配置
 #以下配置均无容错处理，大家都是程序员，配置错误请不要找作者。
@@ -25,19 +26,20 @@ sidebar:
         #     icon: bookmark
         archives:
             title: global.archives
-            url: /archive
+            url: /archive/
             icon: archive
         tags:
             title: global.tags
-            url: /tags
+            url: /tags/
             icon: tags
         search:
             title: global.search
             url: /#search
             icon: search
+            class: st-search-show-outputs
         about:
             title: global.about
-            url: /#about
+            url: /about/
             icon: user
     author_links:
         github:

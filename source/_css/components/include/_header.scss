@@ -11,13 +11,15 @@
 	transform: translate3D(0,0,0);
 	display: none;
 	z-index: 9;
+	overflow: hidden;
 	body.side &{
 		transform: translate3D( $size_sidebar_normal , 0 , 0 )
 	}
 	i{
 		position: absolute;
-		left: $size_common_20;
-		top: $size_common_20;
+		left: 0;
+		top: 0;
+		padding: $size_common_20;
 		cursor: pointer;
 	}
 	h1{
