@@ -1,0 +1,18 @@
+{
+  "name": "hexo-theme-meizi",
+  "description": "a theme for hexo by mochen",
+  "main": "index.js",
+  "authors": [
+    "mochen <imochen@163.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/imochen/hexo-theme-meizi",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
