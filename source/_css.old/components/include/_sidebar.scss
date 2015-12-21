@@ -1,10 +1,11 @@
 #sidebar{
 	width: $size_sidebar_normal;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
-	background-image: url('../images/cover.jpg');
+	background-color: #202020;
+	//background-image: linear-gradient(-45deg, #5a69b4 15% , #2d7cb6 50% , #bb73bf  100% );
 	background-size: cover;
 	overflow: auto;
 	z-index: 1;

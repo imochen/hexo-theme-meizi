@@ -1,22 +1,19 @@
-@import 'base/base';
-
-@import 'base/media-queries';
-
-@import 'base/variables';
-
-@import 'base/layout';
-
-@import 'base/markdown';
+//mixins
+@import 'mixins/query';
 
 
-@import 'components/style';
+//变量函数
+@import 'mixins/variables';
 
-@import 'components/index';
 
-@import 'components/tags';
+//公共样式
+@import 'include/iconfont';
+@import 'include/markdown';
 
-@import 'components/about';
+@import 'include/layout';
+@import 'include/header';
+@import 'include/sidebar';
+@import 'include/main';
 
-@import 'components/archive';
-
-@import 'components/post';
+//页面样式
+@import 'include/core';

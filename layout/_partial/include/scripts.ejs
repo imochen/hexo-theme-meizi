@@ -5,12 +5,16 @@
              this.page.identifier = '<%= post.path %>';
          };
         (function() {
+
             var d = document, s = d.createElement('script');
             var disqus_shortname = '<%= theme.disqus_shortname %>';
             s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
             s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
+
+            setTimeout(function(){
+                (d.head || d.body).appendChild(s);
+            },100);
         })();
     </script>
 <% } else if (theme.duoshuo_shortname) { %>

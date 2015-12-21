@@ -24,9 +24,9 @@
     }
 %>
 <div id="header">
-	<i class="fa fa-lg fa-bars"></i>
+	<div class="btn-bar"><i></i></div>
 	<h1><a href="/"><%= config.title %></a></h1>
-	<a class="about" href="<%= theme.sidebar.menu.about.url %>">
+	<a class="me" href="<%= theme.sidebar.menu.about.url %>">
         <img src="<%= resolveImgURL(theme.image_dir,theme.author.gravatar) %>" alt="<%= theme.author.name %>" alt="<%= theme.author.name %>">
     </a>
 </div>

@@ -42,7 +42,8 @@
                         }
                     %>
                     <div class="desc">
-                        <% if( post.excerpt){ %>
+                        <% console.log( post.excerpt ) %>
+                        <% if( post.excerpt ){%>
                             <%- delHtmlTag(post.excerpt) %>
                         <%} else{ %>
                             <%- delHtmlTag(post.content) %>

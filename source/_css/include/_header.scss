@@ -1,0 +1,82 @@
+#header{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	overflow: hidden;
+	display: none;
+	background-color: $color_light_black;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9;
+	transform: translate3D(0,0,0);
+	@include max-screen( 768px ){
+		&{
+			transition: all .2s $curve;
+			display: block;
+		}
+	}
+	body.side &{
+		transform: translate3D( $size_sidebar_normal , 0 , 0 );
+		.btn-bar{
+			&:before{
+				width: 24px;
+				transform : rotate(45deg-90deg);
+				top: 25px;
+			}
+			&:after{
+				width: 24px;
+				transform : rotate(-45deg+90deg);
+				bottom: 24px;
+			}
+			i{
+				opacity: 0;
+			}
+		}
+	}
+	h1{
+		text-align: center;
+		font-size: 16px;
+		a{
+			color: $color_middle_grey;
+		}
+	}
+	.btn-bar{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		i,&:before,&:after{
+			width: 22px;
+			height: 1px;
+			position: absolute;
+			left: 14px;
+			background-color: $color_middle_grey;
+			transition: all .2s $curve .2s;
+		}
+		i{
+			top: 25px;
+			opacity: 1;
+		}
+		&:before{
+			content: '';
+			top: 17px;
+		}
+		&:after{
+			content: '';
+			bottom: 16px;
+		}
+	}
+	a.me,a.me img{
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		overflow: hidden;
+	}
+	a.me{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+}
