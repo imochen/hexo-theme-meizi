@@ -1,6 +1,6 @@
 # hexo-theme-meizi
 
-(demo)[https://imochen.com]
+[demo](https://imochen.com)
 
 ## 怎么使用
 
