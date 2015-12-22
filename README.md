@@ -1,5 +1,7 @@
 # hexo-theme-meizi
 
+(demo)[https://imochen.com]
+
 ## 怎么使用
 
 ### 安装Hexo
