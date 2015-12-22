@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-meizi",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "a theme for hexo by mochen",
   "main": "index.js",
   "scripts": {
