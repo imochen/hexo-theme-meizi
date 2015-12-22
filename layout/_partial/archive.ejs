@@ -2,6 +2,56 @@
 
 <%- partial('include/sidebar') %>
 
-<%- partial('page/archive') %>
+<%
+    var lastYear;
+    var lastMonth;
+%>
+<div id="main">
+    <div class="wrap">
+    	<div id="page-archive">
+            <% site.posts.sort('date', 'desc').each(function(post) { %>
+                <% var currentYear = post.date.year(); %>
+                <% var currentMonth = post.date.format('MM'); %>
+                <% if (lastYear != currentYear) { %>
+                    <% if (lastYear != null) { %>
+                        </section>
+                            <% lastMonth = null; %>
+                        <% } %>
+                        <% lastYear = currentYear; %>
+                    <% } %>
+                    <% if (lastMonth != currentMonth) { %>
+                        <% if (lastMonth != null) { %>
+                            </section>
+                        <% } %>
+                        <section>
+                            <h1 class="year"><%= currentYear %>年<%= post.date.format('MM') %>月</h1>
+                        <% lastMonth = currentMonth; %>
+                    <% } %>
+                    <article>
+                        <div class="meta">
+                            <span class="time">
+                                <% if (post.lang) { %>
+                                    <%= post.date.locale(post.lang).format(__('date_format')) %>
+                                <% } else { %>
+                                    <%= post.date.locale(page.lang).format(__('date_format')) %>
+                                <% } %>
+                            </span>
+                            <span class="tags">
+                                <%  post.tags.each(function( tag , index ){ %>
+                                    <% if(index !== 0){%>
+                                         , 
+                                    <%}%>
+                                    <a  href="<%= '/tags/' + tag.name  %>" data-tag="<%= tag.name.toLowerCase() %>">
+                                        <%= tag.name %>
+                                    </a>
+                                <% }) %>
+                            </span>
+                        </div>
+                        <h1><a href="<%- url_for(post.path) %>"><%= post.title || '(' + __('post.no_title') + ')' %></a></h1>
+                    </article>
+                <% }) %>
+    	</div>
+    </div>
+</div>
 
 <%- partial('include/footer') %>

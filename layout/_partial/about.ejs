@@ -2,6 +2,15 @@
 
 <%- partial('include/sidebar') %>
 
-<%- partial('page/about') %>
+<div id="main">
+    <div class="wrap">
+    	<div id="page-about">
+    		<h1><%- __('global.about') %></h1>
+    		<section class="markdown">
+    			<%- page.content %>
+    		</section>
+    	</div>
+    </div>
+</div>
 
 <%- partial('include/footer') %>

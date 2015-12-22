@@ -2,6 +2,21 @@
 
 <%- partial('include/sidebar') %>
 
-<%- partial('page/tags') %>
+<div id="main">
+    <div class="wrap">
+        <div id="page-tags">
+            <h1><%- __('global.tags') %></h1>
+            <section>
+                <% site.tags.each(function(tag) { %>
+                    <a href="<%= '/tags/' + tag.name  %>" data-tag="<%= tag.name.toLowerCase() %>">
+                        <%= tag.name + '(' + tag.length + ')' %>
+                    </a>
+                <% }); %>
+            </section>
+        </div>
+    </div>
+</div>
+
+
 
 <%- partial('include/footer') %>
