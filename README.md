@@ -1,15 +1,92 @@
 # hexo-theme-meizi
 
+## 怎么使用
 
-最初在[hexo.io](https://hexo.io/themes/)看到[tranquilpeak](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak)这个主题。但是经过测试之后发现作者并没有那么讲究，有很多显而易见的BUG，移动端几乎没做任何优化。
+### 安装Hexo
 
-所以就有了`hexo-theme-meizi`这个主题。
+```bash
+	npm install hexo-cli -g
+```
+### 初始化项目
+```bash
+	hexo init blog
+	cd blog
+	npm install
+	hexo server --debug
+```
 
-外观上大量借鉴了[tranquilpeak](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak)和[imququ](https://imququ.com)。
+### 安装Meizi主题
+```bash
+	cd theme
+	git clone https://github.com/imochen/hexo-theme-meizi.git
+	mv hexo-theme-meizi meizi
+```
 
-主题内容方面，以照顾*程序员*为主，目前仅实现了写作为主的展现方式。
+### 配置主题
+
+在根目录找到`_config.yml`,将theme改为`meizi`
+
+```javascript
+	theme: meizi
+```
+
+### 初始化主题
+
+```bash
+	hexo new page about
+```
+打开新创建的`about/index.md`
+修改其内容为
+```md
+	title: "关于我"
+	layout: "about"
+	---
+
+	<!-- 这里写你的简介 -->
+```
 
 
-性能和速度，对比*tranquilpeak*仅保留了必要的动画，干掉了大量无用的动画和3D加速混乱使用。另外没有引入额外的JS库，主题相关代码只有寥寥数行。
+```bash
+	hexo new page archive
+```
+打开新创建的`archive/index.md`
+修改其内容为，里面无需再追加任何内容
+```md
+	title: "归档"
+	layout: "all-archives"
+	---
+```
 
-*注意：目前还在开发阶段，谨慎使用*
+
+```bash
+	hexo new page tags
+```
+打开新创建的`tags/index.md`
+修改其内容为，里面无需再追加任何内容
+```md
+	title: "标签"
+	layout: "tags"
+	---
+```
+
+### 启动预览
+
+重新启动Hexo
+```bash
+hexo server --debug
+```
+
+## 二次开发
+
+### 安装开发依赖工具
+
+进入主题目录，安装依赖
+```bash
+	npm install
+```
+
+安装完成后启动gulp任务即可
+
+```bash
+	gulp watch
+```
