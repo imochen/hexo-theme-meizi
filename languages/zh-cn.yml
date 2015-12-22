@@ -1,3 +1,4 @@
+date_format: "MMM DD , YYYY"
 global:
     home: "首页"
     tags: "标签"
