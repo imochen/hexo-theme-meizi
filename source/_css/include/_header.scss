@@ -5,11 +5,6 @@
 	overflow: hidden;
 	display: none;
 	background-color: $color_light_black;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 9;
-	transform: translate3D(0,0,0);
 	@include max-screen( 768px ){
 		&{
 			transition: all .2s $curve;
@@ -17,7 +12,6 @@
 		}
 	}
 	body.side &{
-		transform: translate3D( $size_sidebar_normal , 0 , 0 );
 		.btn-bar{
 			&:before{
 				width: 24px;

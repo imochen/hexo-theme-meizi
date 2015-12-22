@@ -7,6 +7,7 @@
     var lastMonth;
 %>
 <div id="main">
+    <%- partial('include/head') %>
     <div class="wrap">
     	<div id="page-archive">
             <% site.posts.sort('date', 'desc').each(function(post) { %>

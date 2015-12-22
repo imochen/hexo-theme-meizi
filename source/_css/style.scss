@@ -2,11 +2,9 @@
 @import 'mixins/query';
 
 
-//变量函数
 @import 'mixins/variables';
 
 
-//公共样式
 @import 'include/iconfont';
 @import 'include/markdown';
 
@@ -15,5 +13,4 @@
 @import 'include/sidebar';
 @import 'include/main';
 
-//页面样式
 @import 'include/core';

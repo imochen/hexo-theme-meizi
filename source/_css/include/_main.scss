@@ -5,17 +5,20 @@
 	bottom: 0;
 	left: $size_sidebar_normal;
 	z-index: 2;
-	overflow: auto;
+	background-color: $color_default;
+	overflow: hidden;
 	-webkit-overflow-scrolling: touch;
 	background-color: $color_default;
 	.wrap{
 		max-width: 960px;
-		min-height: 100%;
+		height: calc(100% - 50px);
+		overflow: auto;
 		margin: 0 auto;
 		word-wrap: break-word;
     	word-break: break-all;
 	}
 	body.side &{
+		position: fixed;
 		transform: translate3D( $size_sidebar_normal , 0 , 0);
 	}
 	@include screen( 768px , 1024px ){
@@ -25,14 +28,10 @@
 	}
 	@include max-screen( 768px ){
 		&{
-			background-color: $color_grey_grey;
+			background-color: $color_light_grey;
 			left: 0;
 			transition: transform .2s $curve;
-			top: 50px;
 			transform: translate3D( 0 , 0 , 0);
-			.wrap{
-				padding: 5px 5px 0 5px;
-			}
 		}
 	}
 }
