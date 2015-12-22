@@ -1,8 +1,0 @@
-#page-about{
-	padding: 0 $size_common_30;
-}
-@include max-screen( 768px ){
-    #page-about{
-        padding: 0 $size_common_15;
-    }
-}

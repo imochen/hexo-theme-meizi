@@ -30,16 +30,16 @@ document.addEventListener( "DOMContentLoaded", function(){
 
 		var _this = this,
 			body_class_name = 'side',
-			eventFirst = 'click';
-			eventSceond = 'click';
+			eventFirst = 'click',
+			eventSecond = 'click';
 
 		if( !this.isPC ){
 			eventFirst = 'touchstart';
-			eventSceond = 'touchend';
+			eventSecond = 'touchend';
 		}
 
 
-		this.$btn_side.addEventListener( eventSceond ,function(){
+		this.$btn_side.addEventListener( eventSecond ,function(){
 
 			if( _this.$body.className.indexOf( body_class_name ) > -1 ){
 				_this.$body.className = _this.$body.className.replace( body_class_name , '');

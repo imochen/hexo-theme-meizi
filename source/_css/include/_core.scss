@@ -72,7 +72,7 @@
 				margin-bottom: 5px;
 			}
 			article{
-				margin: 5px 5px 0 5px;
+				margin-bottom: 5px;
 				background-color: $color_default;
 				padding: 10px;
 				.meta{
@@ -133,7 +133,6 @@
 		&{
 			height: 50px;
 			padding: 5px 0;
-			margin-top: 5px;
 			li{
 				width: 50%;
 			}
@@ -215,7 +214,6 @@
 	        margin: 0;
 	        padding: 0;
 	        section{
-	        	margin: 5px;
 	        	background-color: $color_default;
 	        	h1.year{
 	        		width: 100%;
@@ -276,7 +274,7 @@
 	@include max-screen( 768px ){
 	    &{
 	    	padding: 0;
-	        margin: 5px;
+	        margin: 0;
 	        background-color: $color_default;
 	        h1{
 	            font-size: 24px;
@@ -302,9 +300,21 @@
 	}
 	@include max-screen( 768px ){
 	    &{
-	    	margin: 5px;
-	    	background-color: $color_default;
-	        padding:15px;
+	    	padding: 0;
+	        margin: 0;
+	        background-color: $color_default;
+	        h1{
+	            font-size: 24px;
+	            margin-bottom: 10px;
+	            height: 50px;
+	            line-height: 50px;
+	            text-align: center;
+	            margin: 0;
+	            border-bottom:1px solid $color_light_grey;
+	        }
+	        section{
+	        	padding: 10px;
+	        }
 	    }
 	}
 }
@@ -349,8 +359,8 @@
     }
     @include max-screen( 768px ){
 	    &{
-	    	margin: 5px;
-	        padding: 15px;
+	    	margin: 0;
+	        padding: 10px;
 	        background-color: $color_default;
 	        article{
 	            .meta{

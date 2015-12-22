@@ -3,6 +3,8 @@ image_dir : static/images/
 
 favicon: /static/images/favicon.png
 
+sidebar_behavior: 2
+
 #用户配置
 author:
 	#用户名称
