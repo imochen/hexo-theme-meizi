@@ -1,16 +1,16 @@
 #图片目录配置
 image_dir : static/images/
 
-favicon: /static/images/favicon.png
+favicon: favicon.png
 
 sidebar_behavior: 2
 
 #用户配置
 author:
-	#用户名称
-	name: 墨尘
-	#用户头像
-	gravatar: gravatar.jpg
+    #用户名称
+    name: 墨尘
+    #用户头像
+    gravatar: gravatar.jpg
 
 disqus_shortname: imochen
 duoshuo_shortname: 
@@ -50,38 +50,38 @@ sidebar:
             title: global.github
             url: https://github.com/imochen
             icon: github
-        stack_overflow:
-            title: global.stack_overflow
-            url: http://stackoverflow.com/users
-            icon: stackoverflow
-        twitter:
-            title: global.twitter
-            url: https://twitter.com/
-            icon: twitter
+        # stack_overflow:
+        #     title: global.stack_overflow
+        #     url: http://stackoverflow.com/users
+        #     icon: stackoverflow
+        # twitter:
+        #     title: global.twitter
+        #     url: https://twitter.com/
+        #     icon: twitter
         weibo:
             title: global.weibo
-            url: https://weibo.com/
+            url: http://weibo.com/677612322/
             icon: weibo
-        weixin:
-            title: global.weixin
-            url: https://weixin.com/
-            icon: weixin
-        facebook:
-            title: global.facebook
-            url: https://facebook.com/
-            icon: facebook
-        google_plus:
-            title: global.google_plus
-            url: https://plus.google.com/
-            icon: googleplus
-        linked_in:
-            title: global.linkedin
-            url: https://www.linkedin.com/profile/
-            icon: linkedin
-        mail:
-            title: global.mail
-            url: mailto
-            icon: mail
+        # weixin:
+        #     title: global.weixin
+        #     url: https://weixin.com/
+        #     icon: weixin
+        # facebook:
+        #     title: global.facebook
+        #     url: https://facebook.com/
+        #     icon: facebook
+        # google_plus:
+        #     title: global.google_plus
+        #     url: https://plus.google.com/
+        #     icon: googleplus
+        # linked_in:
+        #     title: global.linkedin
+        #     url: https://www.linkedin.com/profile/
+        #     icon: linkedin
+        # mail:
+        #     title: global.mail
+        #     url: mailto
+        #     icon: mail
     rss:
         rss:
             title: global.rss
