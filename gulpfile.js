@@ -25,7 +25,9 @@ var conf = {
 
 gulp.task('css',function(){
 	return sass( conf.src.css )
-		.pipe(autoprefixer())
+		.pipe(autoprefixer({
+			browsers: ['last 5 versions','> 5%'],
+		}))
 		.pipe(minifyCss())
 		.pipe( gulp.dest(conf.dest.css) );
 });

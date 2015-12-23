@@ -27,7 +27,6 @@ document.addEventListener( "DOMContentLoaded", function(){
 
 	Meizi.bindEvent = function(){
 
-
 		var _this = this,
 			body_class_name = 'side',
 			eventFirst = 'click',
@@ -36,6 +35,9 @@ document.addEventListener( "DOMContentLoaded", function(){
 		if( !this.isPC ){
 			eventFirst = 'touchstart';
 			eventSecond = 'touchend';
+			document.documentElement.className += ' mob';
+		}else{
+			document.documentElement.className += ' pc';
 		}
 
 

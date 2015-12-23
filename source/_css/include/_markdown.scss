@@ -101,13 +101,19 @@
 		}
 	}
 	.highlight {
-	    position: relative;
 	    margin: 1em 0;
 	    border-radius: 2px;
 	    line-height: 1.1em;
 	    background-color: #f8f8f8;
-	    overflow: auto;
 	    -webkit-overflow-scrolling: touch;
+	}
+
+	.highlight table{
+		display: block;
+		overflow-x: auto;
+		overflow-y: hidden;
+		width: 100%;
+		background-color: #23241f;
 	}
 
 	.highlight table,.highlight tr,.highlight td {
@@ -126,60 +132,6 @@
 	    padding: 1.2em 1.4em;
 	    line-height: 1.5em;
 	    margin: 0;
-	    background-color: #23241f;
-	}
-
-	.highlight.html .code:after,.highlight.js .code:after,.highlight.bash .code:after,.highlight.css .code:after,.highlight.scss .code:after,.highlight.diff .code:after,.highlight.java .code:after,.highlight.xml .code:after,.highlight.python .code:after,.highlight.json .code:after {
-	    position: absolute;
-	    top: 0;
-	    right: 0;
-	    color: #ccc;
-	    text-align: right;
-	    font-size: 0.75em;
-	    padding: 5px 10px 0;
-	    line-height: 15px;
-	    height: 15px;
-	    font-weight: 600
-	}
-
-	.highlight.html .code:after {
-	    content: "HTML"
-	}
-
-	.highlight.js .code:after {
-	    content: "JS"
-	}
-
-	.highlight.bash .code:after {
-	    content: "BASH"
-	}
-
-	.highlight.css .code:after {
-	    content: "CSS"
-	}
-
-	.highlight.scss .code:after {
-	    content: "SCSS"
-	}
-
-	.highlight.diff .code:after {
-	    content: "DIFF"
-	}
-
-	.highlight.java .code:after {
-	    content: "JAVA"
-	}
-
-	.highlight.xml .code:after {
-	    content: "XML"
-	}
-
-	.highlight.python .code:after {
-	    content: "PYTHON"
-	}
-
-	.highlight.json .code:after {
-	    content: "JSON"
 	}
 
 	pre {
