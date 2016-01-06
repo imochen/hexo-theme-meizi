@@ -15,7 +15,7 @@
 	    padding: 30px 30px 20px 30px;
 	    position: relative;
 	    a{
-		    color: $color_light_black;
+		    color: $post_title_color;
 			text-decoration: none;
 			transition: color .2s $curve;
 			&:hover{
@@ -378,6 +378,47 @@
 	                margin-bottom: 10px;
 	            }
 	        }
+	    }
+	}
+}
+#page-links{
+	padding: 30px;
+	h1{
+		color: $color_middle_grey;
+		margin-bottom: 10px;
+	}
+	section{
+		padding:30px;
+	}
+	ul{
+		li{
+			line-height: 2;
+			i{
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 5px;
+				color: #5ab300;
+			}
+		}
+	}
+	@include max-screen( 768px ){
+	    &{
+	    	margin: 5px;
+	    	padding: 0;
+		    background-color: $color_default;
+		    min-height: calc(100% - 10px);
+	    	h1{
+	            font-size: 24px;
+	            margin-bottom: 10px;
+	            height: 50px;
+	            line-height: 50px;
+	            text-align: center;
+	            margin: 0;
+	            border-bottom:1px solid $color_light_grey;
+	        }
+	        section{
+		        padding:10px;
+			}
 	    }
 	}
 }

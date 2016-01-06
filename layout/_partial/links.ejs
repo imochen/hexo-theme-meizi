@@ -1,0 +1,17 @@
+<%- partial('include/header') %>
+
+<%- partial('include/sidebar') %>
+
+<div id="main">
+	<%- partial('include/head') %>
+    <div class="wrap">
+    	<div id="page-links">
+    		<h1><%- __('global.links') %></h1>
+    		<section class="markdown">
+    			<%- page.content %>
+    		</section>
+    	</div>
+    </div>
+</div>
+
+<%- partial('include/footer') %>

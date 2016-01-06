@@ -5,6 +5,8 @@ favicon: favicon.png
 
 sidebar_behavior: 2
 
+#sidebar_bg: cover.jpg
+
 #用户配置
 author:
     #用户名称
@@ -12,7 +14,7 @@ author:
     #用户头像
     gravatar: gravatar.jpg
 
-disqus_shortname: imochen
+disqus_shortname: mochen
 duoshuo_shortname: 
 #swiftype_install_key: w8FFTKFNZed2tJN2ZA6p
 
@@ -45,6 +47,10 @@ sidebar:
             title: global.about
             url: /about/
             icon: user
+        links:
+            title: global.link
+            url: /links/
+            icon: link
     author_links:
         github:
             title: global.github

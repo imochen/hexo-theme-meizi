@@ -1,5 +1,8 @@
 $font_family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei';
 
+
+
+/*============== default ==============*/
 $color_light_black: #323436;
 $color_dark_black: #222;
 
@@ -10,6 +13,25 @@ $color_dark_grey: #666;
 
 $color_default: #fff;
 $color_main: #2479CC;
+/*============== default ==============*/
+
+
+/*========= color for dev =========*/
+
+$body_color: #fff; //正常颜色
+$body_mob_color: #eee; //小屏/mob下颜色
+
+$sidebar_back_color: #202020; //侧栏背景色，如果配置的背景图，则此项无效
+$sidebar_font_color: #999; //侧栏字体颜色
+$sidebar_hover_color: rgba($sidebar_font_color,.8); //字体hover颜色
+
+$header_back_color: #323436; //顶部背景色，小屏/mob下显示。
+$header_font_color: #999; //顶部网站标题颜色
+$header_btn_color: #999; //展开侧栏按钮颜色
+
+$post_title_color: #323436; //列表页标题颜色
+
+
 
 $size_sidebar_normal: 250px;
 $size_sidebar_mini: 75px;

@@ -23,7 +23,13 @@
         }
     }
 %>
-<nav id="sidebar" class="<% if(theme.sidebar_behavior){ %> behavior_<%=theme.sidebar_behavior%><% }%>">
+<%
+    var bg = '';
+    if( theme.sidebar_bg ){
+        bg = 'style="background-image: url('+ resolveImgURL(theme.image_dir,theme.sidebar_bg) +');background-size: cover;"';
+    }
+%>
+<nav <%-bg%> id="sidebar" class="<% if(theme.sidebar_behavior){ %> behavior_<%=theme.sidebar_behavior%><% }%>">
     <div class="wrap">
     	<% if( theme.author.gravatar ){ %>
     		<div class="profile">

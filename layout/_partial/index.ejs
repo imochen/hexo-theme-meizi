@@ -10,7 +10,15 @@
                 <h1 class="search">标签<b><%=page.tag %></b>的搜索结果</h1>
             <% } %>
             <% page.posts.each(function(post) { %>
-                <article>
+                <%  
+                    var url;
+                    if( post.link ){
+                        url = url_for(post.link)
+                    }else{
+                        url = url_for(post.path);
+                    }
+                %>
+                <article data-url='<%-url%>'>
                     <div class="meta">
                         <div class="date">
                             <% if (post.lang) { %>

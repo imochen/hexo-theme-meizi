@@ -1,5 +1,26 @@
 document.addEventListener( "DOMContentLoaded", function(){
 
+	var utils = {
+		isMob : (function(){
+			var ua = navigator.userAgent.toLowerCase();
+			var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+			var result = false;
+			for( var i = 0 ; i < agents.length; i++ ){
+				if( ua.indexOf( agents[i].toLowerCase() ) > -1){
+					result = true;
+				}
+			}
+			return result;
+		})()
+	}
+
+
+	if( utils.isMob ){
+		document.documentElement.className += ' mob';
+	}else{
+		document.documentElement.className += ' pc';
+	}
+
 
 	var Meizi = {
 		$sidebar : document.querySelector('#sidebar'),
@@ -7,23 +28,12 @@ document.addEventListener( "DOMContentLoaded", function(){
 		$sidebar_mask : document.querySelector('#sidebar-mask'),
 		$body : document.body,
 		$btn_side : document.querySelector('#header .btn-bar'),
+		$article : document.querySelectorAll('.mob #page-index article'),
 
 		init : function(){
 			this.bindEvent(); //绑定事件
 		}
 	};
-
-	Meizi.isPC = (function(){
-		var ua = navigator.userAgent.toLowerCase();
-		var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-		var result = true;
-		for( var i = 0 ; i < agents.length; i++ ){
-			if( ua.indexOf( agents[i].toLowerCase() ) > -1){
-				result = false;
-			}
-		}
-		return result;
-	})();
 
 	Meizi.bindEvent = function(){
 
@@ -32,12 +42,17 @@ document.addEventListener( "DOMContentLoaded", function(){
 			eventFirst = 'click',
 			eventSecond = 'click';
 
-		if( !this.isPC ){
+		if( utils.isMob ){
 			eventFirst = 'touchstart';
 			eventSecond = 'touchend';
-			document.documentElement.className += ' mob';
-		}else{
-			document.documentElement.className += ' pc';
+		}
+
+
+		for( var i = 0 ; i < this.$article.length; i++ ){
+			this.$article[i].addEventListener( 'click' , function(){
+				var url = this.getAttribute('data-url');
+				window.location.href = url ;
+			},false);
 		}
 
 

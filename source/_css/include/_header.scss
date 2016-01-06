@@ -4,7 +4,7 @@
 	line-height: 50px;
 	overflow: hidden;
 	display: none;
-	background-color: $color_light_black;
+	background-color: $header_back_color;
 	@include max-screen( 768px ){
 		&{
 			transition: all .2s $curve;
@@ -32,7 +32,7 @@
 		text-align: center;
 		font-size: 16px;
 		a{
-			color: $color_middle_grey;
+			color: $header_font_color;
 		}
 	}
 	.btn-bar{
@@ -46,7 +46,7 @@
 			height: 1px;
 			position: absolute;
 			left: 14px;
-			background-color: $color_middle_grey;
+			background-color: $header_btn_color;
 			transition: all .2s $curve .2s;
 		}
 		i{

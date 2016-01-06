@@ -4,7 +4,7 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	background-color: #202020;
+	background-color: $sidebar_back_color;
 	overflow: auto;
 	z-index: 1;
 	-webkit-overflow-scrolling: touch;
@@ -33,7 +33,7 @@
 			display: block;
 			padding: 10px 0;
 			font-size: 18px;
-			color: $color_middle_grey;
+			color: $sidebar_font_color;
 			text-align: center;
 		}
 	}
@@ -48,7 +48,7 @@
 			a{
 				padding-left: 25px;
 				display: block;
-				color: $color_middle_grey;
+				color: $sidebar_font_color;
 				transition: color .2s $curve;
 				text-decoration: none;
 				i,span{
@@ -64,7 +64,7 @@
 					margin-right:  20px;
 				}
 				&:hover{
-					color: $color_default;
+					color : $sidebar_hover_color;
 				}
 			}
 		}
