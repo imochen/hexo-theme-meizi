@@ -74,6 +74,7 @@ document.addEventListener( "DOMContentLoaded", function(){
 			e.preventDefault();
 		},false);
 
+		
 		window.addEventListener('resize',function(){
 			_this.$body.className = _this.$body.className.replace( body_class_name , '');
 			_this.$sidebar_mask.style.display = 'none';

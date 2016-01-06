@@ -6,6 +6,8 @@ body{
 html,body{
 	width: 100%;
 	height: 100%;
+}
+body.side{
 	overflow: hidden;
 }
 
@@ -29,7 +31,7 @@ a{
 	box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
 	width: 3px;
 	height: 3px;
 }
@@ -45,4 +47,4 @@ a{
 }
 ::-webkit-scrollbar-thumb:active{
 	background-color: rgba(0,0,0,.5);
-}
+} */
