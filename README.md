@@ -34,6 +34,8 @@
 
 ### 初始化主题
 
+#### 友情链接页面初始化
+
 ```bash
 	hexo new page links
 ```
@@ -50,7 +52,7 @@
 	这样前面会带一个小锁，标明是 https 的站点
 ```
 
-
+#### 关于我页面初始化
 ```bash
 	hexo new page about
 ```
@@ -64,7 +66,7 @@
 	<!-- 这里写你的简介 -->
 ```
 
-
+#### 归档页面初始化
 ```bash
 	hexo new page archive
 ```
@@ -76,7 +78,7 @@
 	---
 ```
 
-
+#### 标签页面初始化
 ```bash
 	hexo new page tags
 ```
