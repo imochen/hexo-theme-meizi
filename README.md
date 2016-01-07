@@ -35,6 +35,23 @@
 ### 初始化主题
 
 ```bash
+	hexo new page links
+```
+打开新创建的`links/index.md`
+修改其内容为
+```md
+	title: "友情链接"
+	layout: "links"
+	---
+
+	<!-- 这里写你的友情链接列表 -->
+
+	- <i class="iconfont icon-https"></i>[JerryQu 的小站](https://imququ.com/)（万能的屈屈大神）
+	这样前面会带一个小锁，标明是 https 的站点
+```
+
+
+```bash
 	hexo new page about
 ```
 打开新创建的`about/index.md`
