@@ -12,7 +12,6 @@
     	word-break: break-all;
 	}
 	body.side &{
-		position: fixed;
 		transform: translate3D( $size_sidebar_normal , 0 , 0);
 	}
 	@include screen( 768px , 1024px ){
@@ -20,10 +19,8 @@
 			padding-left: $size_sidebar_mini;
 		}
 	}
-	@include max-screen( 768px ){
+	@include max-screen( 769px ){
 		&{
-			position: relative;
-			z-index: 2;
 			padding-left: 0;
 			background-color: $color_grey_grey;
 			min-height: 100%;

@@ -93,7 +93,7 @@
 		}
 	}
 
-	@include screen( 768px , 1024px ){
+	@include screen( 769px , 1024px ){
 		&{
 			width: $size_sidebar_mini;
 			.profile{

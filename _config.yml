@@ -3,7 +3,7 @@ image_dir : static/images/
 
 favicon: favicon.png
 
-sidebar_behavior: 2
+sidebar_behavior: 1
 
 #sidebar_bg: cover.jpg
 
