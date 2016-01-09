@@ -1,7 +1,5 @@
 #main{
 	padding-left: $size_sidebar_normal;
-	z-index: 2;
-	overflow: hidden;
 	background-color: $color_default;
 	-webkit-overflow-scrolling: touch;
 	background-color: $color_default;
@@ -11,9 +9,6 @@
 		word-wrap: break-word;
     	word-break: break-all;
 	}
-	body.side &{
-		transform: translate3D( $size_sidebar_normal , 0 , 0);
-	}
 	@include screen( 768px , 1024px ){
 		&{
 			padding-left: $size_sidebar_mini;
@@ -21,11 +16,10 @@
 	}
 	@include max-screen( 769px ){
 		&{
+			width: 100%;
 			padding-left: 0;
 			background-color: $color_grey_grey;
 			min-height: 100%;
-			transition: transform .2s $curve;
-			transform: translate3D( 0 , 0 , 0);
 			padding-top: 50px;
 		}
 	}

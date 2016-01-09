@@ -1,3 +1,7 @@
+body.side{
+	position: fixed;
+	transform: translate3D($size_sidebar_normal,0,0);
+}
 #sidebar{
 	width: $size_sidebar_normal;
 	height: 100%;
@@ -12,9 +16,6 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-	}
-	body.side &{
-		transform: translate3D(0,0,0);
 	}
 	.profile{
 		padding-top: 40px;
@@ -127,7 +128,7 @@
 }
 #sidebar-mask{
 	position: absolute;
-	left: $size_sidebar_normal;
+	left: 0;
 	top: 0;
 	right: 0;
 	bottom: 0;
