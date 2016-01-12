@@ -329,7 +329,8 @@
 #page-post{
     padding: 30px;
     article{
-        border-bottom: 1px solid $color_light_grey;
+    	padding-bottom: 20px;
+        border-bottom: 1px solid $color_grey_grey;
         position: relative;
         img{
             max-width: 100%;
@@ -362,6 +363,15 @@
         h1{
             margin-top: 0;
             margin-bottom: 25px;
+        }
+        .post-info{
+        	padding: 20px 20px 10px 20px;
+        	border: 1px solid #dedede;
+        	background-color: $color_light_grey;
+        	font-size: 14px;
+        	i{
+        		color: $color_middle_grey;
+        	}
         }
     }
     @include max-screen( 769px ){
@@ -422,8 +432,9 @@
 	    }
 	}
 }
-
-#disqus_thread,#ds_thread{
-	border-top: 1px solid $color_grey_grey;
-	padding-top: 20px;
+#comments{
+	color: $color_dark_grey;
+	h2{
+		padding: 10px 0;
+	}
 }
